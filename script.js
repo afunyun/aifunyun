@@ -29,13 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const panelWidth = Math.min(mainContentWidth * 0.8, 320);
-
-            // Set CSS custom property for shift distance
+            // dynamic values so yes there is css here sue me
             mainContent.style.setProperty('--shift-distance', `-${shiftDistance}px`);
-            interestsPanel.style.width = `${panelWidth}px`;
-            interestsPanel.style.position = 'relative';
-            interestsPanel.style.left = '0';
-            
+            interestsPanel.style.setProperty('--panel-width', `${panelWidth}px`);
             document.body.classList.add('show-interests');
         }
     }
@@ -48,11 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 500);
         } else {
             document.body.classList.remove('show-interests');
-            interestsPanel.style.width = '0';
-            setTimeout(() => {
-                interestsPanel.style.position = 'absolute';
-                interestsPanel.style.left = '100%';
-            }, 500);
+            // Let CSS handle the transition back to default state
         }
     }
 
@@ -76,9 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.remove('show-interests', 'show-interests-mobile');
         mainContent.style.removeProperty('--shift-distance');
         if (interestsPanel) {
-            interestsPanel.style.width = '0';
-            interestsPanel.style.position = 'absolute';
-            interestsPanel.style.left = '100%';
+            interestsPanel.style.removeProperty('--panel-width');
         }
         if (mobileInterestsPanel) {
             mobileInterestsPanel.classList.add('hidden', 'pointer-events-none');
