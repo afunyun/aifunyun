@@ -1,18 +1,7 @@
-document.querySelectorAll('.icon-link').forEach(link => {
-    link.addEventListener('mouseenter', function () {
-        this.style.transform = 'scale(1.1)';
-    });
-
-    link.addEventListener('mouseleave', function () {
-        this.style.transform = 'scale(1)';
-    });
-});
+// Icon link hover effects are now handled by CSS
 
 document.addEventListener('DOMContentLoaded', function () {
-    const iconLinks = document.querySelectorAll('.icon-link');
-    iconLinks.forEach(link => {
-        link.style.transition = 'transform 0.2s ease';
-    });
+    // Icon link transitions are now handled by CSS
 
     const interestsToggle = document.getElementById('interests-toggle');
     const interestsPanel = document.getElementById('interests-panel');
@@ -26,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showInterests() {
         if (isMobile()) {
-            mainContent.style.transform = 'translateY(-100vh)';
+            document.body.classList.add('show-interests-mobile');
             mobileInterestsPanel.classList.remove('hidden', 'pointer-events-none');
-            mobileInterestsPanel.style.opacity = '1';
         } else {
             const viewportWidth = window.innerWidth;
             const mainContentWidth = mainContent.offsetWidth;
@@ -42,25 +30,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const panelWidth = Math.min(mainContentWidth * 0.8, 320);
 
-            mainContent.style.transform = `translateX(-${shiftDistance}px)`;
+            // Set CSS custom property for shift distance
+            mainContent.style.setProperty('--shift-distance', `-${shiftDistance}px`);
             interestsPanel.style.width = `${panelWidth}px`;
-            interestsPanel.style.opacity = '1';
             interestsPanel.style.position = 'relative';
             interestsPanel.style.left = '0';
+            
+            document.body.classList.add('show-interests');
         }
     }
 
     function hideInterests() {
         if (isMobile()) {
-            mainContent.style.transform = 'translateY(0)';
-            mobileInterestsPanel.style.opacity = '0';
+            document.body.classList.remove('show-interests-mobile');
             setTimeout(() => {
                 mobileInterestsPanel.classList.add('hidden', 'pointer-events-none');
             }, 500);
         } else {
-            mainContent.style.transform = 'translateX(0)';
+            document.body.classList.remove('show-interests');
             interestsPanel.style.width = '0';
-            interestsPanel.style.opacity = '0';
             setTimeout(() => {
                 interestsPanel.style.position = 'absolute';
                 interestsPanel.style.left = '100%';
@@ -85,17 +73,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('resize', () => {
-        if (mainContent) mainContent.style.transform = 'translate(0, 0)';
+        document.body.classList.remove('show-interests', 'show-interests-mobile');
+        mainContent.style.removeProperty('--shift-distance');
         if (interestsPanel) {
             interestsPanel.style.width = '0';
-            interestsPanel.style.opacity = '0';
             interestsPanel.style.position = 'absolute';
             interestsPanel.style.left = '100%';
         }
         if (mobileInterestsPanel) {
-            mobileInterestsPanel.style.opacity = '0';
             mobileInterestsPanel.classList.add('hidden', 'pointer-events-none');
-
         }
     });
 });

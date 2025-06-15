@@ -1,9 +1,11 @@
-# Personal Website
+# afunyun page
+### afunyun.github.io
 
-A small personal "about me" website built with HTML, CSS, and JavaScript, to be deployed here specifically.
+A small personal "about me" webpage built with HTML, CSS, and JavaScript, to be deployed here specifically.
 
 ## Overview
 This project is my little personal site, a modern design with smooth animations and reactive layouts, making it suitable for both desktop and mobile devices. In theory.
+
 ## Technologies Used
 - HTML5
 - CSS3
@@ -14,16 +16,6 @@ This project is my little personal site, a modern design with smooth animations 
 - Not much.
 - Animation adapts to screen size/client device.
 - Might add more probably won't.
-
-## File Structure
-
-```
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── _config.yml         # GitHub Pages configuration
-└── README.md           # This file
-```
 
 ## Browser Support
 
