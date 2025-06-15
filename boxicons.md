@@ -18,7 +18,6 @@ Instead of installing you may use the remote version
 </head>
 ```
 
-
 2. To use an icon on your page, add a class 'bx' and separate class with the icons name with a prefix 'bx-' for regular icons , 'bxs-' for solid icons and 'bxl-' for logos:
 
 ```html
@@ -76,6 +75,5 @@ The Custom Element class (`BoxIconElement`) exposes the following static members
 -   `defined([tagName])`: Defines the Element in the custom element registry using either the tagName provided on input or the (default) the one defined on the Class.
 -   `cdnUrl`: property that holds the URL that will be used to retrieve the images. URL should point to the folder that contains the images. example: `//unpkg.com/boxicons@1.5.2/svg` (no trailing forward slash)
 -   `getIconSvg(iconName)`: method used to retrieve the SVG image. Should return a Promise that resolves with the SVG source (String).
-
 
 [Check out all the icons here!](https://boxicons.com)
