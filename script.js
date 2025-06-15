@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     iconLinks.forEach(link => {
         link.style.transition = 'transform 0.2s ease';
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
     const interestsToggle = document.getElementById('interests-toggle');
     const interestsPanel = document.getElementById('interests-panel');
     const mobileInterestsPanel = document.getElementById('mobile-interests-panel');
@@ -87,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('resize', () => {
-        if (mainContent) mainContent.style.transform = 'translateX(0)';
+        if (mainContent) mainContent.style.transform = 'translate(0, 0)';
         if (interestsPanel) {
             interestsPanel.style.width = '0';
             interestsPanel.style.opacity = '0';
@@ -100,5 +98,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }
     });
-
 });

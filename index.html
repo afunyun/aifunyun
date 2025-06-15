@@ -12,7 +12,6 @@
 </head>
 
 <body class="bg-black text-gray-300 min-h-screen flex items-center justify-center p-8">
-    <!-- Social Links - Top Right -->
     <div class="fixed top-6 right-6 flex space-x-4 z-10">
         <a class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
             href="https://github.com/afunyun" aria-label="GitHub">
@@ -52,12 +51,11 @@
             </main>
         </div>
 
-        <!-- Interests Panel for Desktop -->
         <div id="interests-panel"
             class="w-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0 flex-shrink-0 absolute left-full top-0 h-full">
             <div class="pl-8 pr-4">
                 <h2 class="text-2xl font-bold text-gray-100 mb-6">Current Interests</h2>
-                <ul class="space-y-3 text-gray-400">
+                <ul id="interests-list" class="space-y-3 text-gray-400">
                     <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
                     <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
                     <li class="border-l-2 border-amber-500 pl-4">Building useful but overlooked tools</li>
@@ -71,16 +69,15 @@
             </div>
         </div>
 
-        <!-- Mobile Interests Panel -->
         <div id="mobile-interests-panel"
             class="hidden fixed inset-0 bg-black text-center flex flex-col items-center justify-center p-8 transition-all duration-500 ease-in-out opacity-0 pointer-events-none">
             <h2 class="text-3xl font-bold text-gray-100 mb-8">Current Interests</h2>
-            <ul class="space-y-4 text-lg text-gray-400 mb-8">
-                <li class="border-l-2 border-amber-500 pl-4">Interest 1</li>
-                <li class="border-l-2 border-amber-500 pl-4">Interest 2</li>
-                <li class="border-l-2 border-amber-500 pl-4">Interest 3</li>
-                <li class="border-l-2 border-amber-500 pl-4">Interest 4</li>
-                <li class="border-l-2 border-amber-500 pl-4">Interest 5</li>
+            <ul id="mobile-interests-list" class="space-y-4 text-lg text-gray-400 mb-8">
+                <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
+                <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
+                <li class="border-l-2 border-amber-500 pl-4">Building useful but overlooked tools</li>
+                <li class="border-l-2 border-amber-500 pl-4">AI Alignment or the lack thereof</li>
+                <li class="border-l-2 border-amber-500 pl-4">Scitech in general</li>
             </ul>
             <button
                 class="close-interests text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4 text-lg">

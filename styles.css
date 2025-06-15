@@ -12,7 +12,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-.icon-link:hover .material-icons {
+.icon-link:hover box-icon {
     color: #f59e0b;
 }
 
