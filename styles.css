@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.icon-link:hover .material-icons {
+    color: #f59e0b;
+}
+
+.accent-border {
+    border-color: #f59e0b;
+}
+
+.accent-shadow {
+    box-shadow: 0 0 15px 0 rgba(245, 158, 11, 0.5);
+}
