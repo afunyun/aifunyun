@@ -1,5 +1,5 @@
 # afunyun page
-### afunyun.github.io
+### [afunyun.github.io](https://afunyun.github.io/aifunyun/)
 
 A small personal "about me" webpage built with HTML, CSS, and JavaScript, to be deployed here specifically.
 
