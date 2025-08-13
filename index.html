@@ -1,119 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>afunyun + ai = slop</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-</head>
+  </head>
 
-<body class="bg-black text-gray-300 min-h-screen flex items-center justify-center p-8">
+  <body
+    class="bg-black text-gray-300 min-h-screen flex items-center justify-center p-8"
+  >
     <div class="fixed top-6 right-6 flex space-x-4 z-10">
-        <a class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
-            href="https://github.com/afunyun" aria-label="GitHub">
-            <box-icon name="github" type="logo" color="currentColor" size="24px"></box-icon>
-        </a>
-        <a class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
-            href="https://huggingface.co/afunyun" aria-label="Hugging Face">
-            <box-icon name="brain" color="currentColor" size="24px"></box-icon>
-        </a>
-        <a class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
-            href="mailto:personal@afjaun.mozmail.com" aria-label="Email">
-            <box-icon name="envelope" color="currentColor" size="24px"></box-icon>
-        </a>
+      <a
+        class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
+        href="https://github.com/afunyun"
+        aria-label="GitHub"
+      >
+        <box-icon
+          name="github"
+          type="logo"
+          color="currentColor"
+          size="24px"
+        ></box-icon>
+      </a>
+      <a
+        class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
+        href="https://huggingface.co/afunyun"
+        aria-label="Hugging Face"
+      >
+        <box-icon name="brain" color="currentColor" size="24px"></box-icon>
+      </a>
+      <a
+        class="text-gray-500 hover:text-amber-500 transition-colors duration-300 icon-link"
+        href="mailto:personal@afjaun.mozmail.com"
+        aria-label="Email"
+      >
+        <box-icon name="envelope" color="currentColor" size="24px"></box-icon>
+      </a>
     </div>
 
     <div class="flex w-full max-w-6xl relative justify-center items-center">
-        <div id="main-content"
-            class="w-full max-w-lg text-center transition-transform duration-500 ease-in-out flex-shrink-0">
-            <header class="mb-10">
-                <img alt="AIF logo"
-                    class="w-40 h-40 mx-auto mb-4 rounded-lg border-2 border-amber-500 shadow-lg shadow-amber-500/50 object-contain bg-black"
-                    src="AIF.png" />
-            </header>
+      <div
+        id="main-content"
+        class="w-full max-w-lg text-center transition-transform duration-500 ease-in-out flex-shrink-0"
+      >
+        <header class="mb-10">
+          <img
+            alt="AIF logo"
+            class="w-40 h-40 mx-auto mb-4 rounded-lg border-2 border-amber-500 shadow-lg shadow-amber-500/50 object-contain bg-black"
+            src="AIF.png"
+          />
+        </header>
 
-            <main class="mb-10">
-                <h2
-                    class="text-3xl font-bold text-gray-500 mb-1 relative opacity-50 hover:opacity-100 hover:text-amber-400 transition-all duration-300 cursor-default hover:drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]">
-                    afunyun
-                    <span
-                        class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-amber-500 rounded-full opacity-30 hover:opacity-100 transition-opacity duration-300"></span>
-                </h2>
-                <p class="text-lg text-gray-500 mb-4 mt-4">resident cringe enthusiast and AI alignment skeptic</p>
-                <a href="#" id="interests-toggle" aria-expanded="false"
-                    class="text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4">
-                    Current Interests
-                </a>
-            </main>
-        </div>
+        <main class="mb-10">
+          <h2
+            class="text-3xl font-bold text-gray-500 mb-1 relative opacity-50 hover:opacity-100 hover:text-amber-400 transition-all duration-300 cursor-default hover:drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]"
+          >
+            afunyun
+            <span
+              class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-amber-500 rounded-full opacity-30 hover:opacity-100 transition-opacity duration-300"
+            ></span>
+          </h2>
+          <p class="text-lg text-gray-500 mb-4 mt-4">
+            resident cringe enthusiast and AI alignment skeptic
+          </p>
+          <a
+            href="#"
+            id="interests-toggle"
+            aria-expanded="false"
+            class="text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4"
+          >
+            Current Interests
+          </a>
+        </main>
+      </div>
 
-        <div id="interests-panel"
-            class="w-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0 flex-shrink-0 absolute left-full top-0 h-full">
-            <div class="pl-8 pr-4">
-                <h2 class="text-2xl font-bold text-gray-100 mb-6">Current Interests</h2>
-                <ul id="interests-list" class="space-y-3 text-gray-400">
-                    <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
-                    <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
-                    <li class="border-l-2 border-amber-500 pl-4">Building useful but overlooked tools</li>
-                    <li class="border-l-2 border-amber-500 pl-4">AI Alignment or the lack thereof</li>
-                    <li class="border-l-2 border-amber-500 pl-4">Scitech in general</li>
-                </ul>
-                <button
-                    class="close-interests mt-6 text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4 items-center">
-                    Close
-                </button>
-            </div>
+      <div
+        id="interests-panel"
+        class="w-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0 flex-shrink-0 absolute left-full top-0 h-full"
+      >
+        <div class="pl-8 pr-4">
+          <h2 class="text-2xl font-bold text-gray-100 mb-6">
+            Current Interests
+          </h2>
+          <ul id="interests-list" class="space-y-3 text-gray-400">
+            <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
+            <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
+            <li class="border-l-2 border-amber-500 pl-4">
+              Building useful but overlooked tools
+            </li>
+            <li class="border-l-2 border-amber-500 pl-4">
+              AI Alignment or the lack thereof
+            </li>
+            <li class="border-l-2 border-amber-500 pl-4">Scitech in general</li>
+          </ul>
+          <button
+            class="close-interests mt-6 text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4 items-center"
+          >
+            Close
+          </button>
         </div>
+      </div>
 
-        <div id="mobile-interests-panel"
-            class="hidden fixed inset-0 bg-black text-center flex flex-col items-center justify-center p-8 transition-all duration-500 ease-in-out opacity-0 pointer-events-none">
-            <h2 class="text-3xl font-bold text-gray-100 mb-8">Current Interests</h2>
-            <ul id="mobile-interests-list" class="space-y-4 text-lg text-gray-400 mb-8">
-                <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
-                <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
-                <li class="border-l-2 border-amber-500 pl-4">Building useful but overlooked tools</li>
-                <li class="border-l-2 border-amber-500 pl-4">AI Alignment or the lack thereof</li>
-                <li class="border-l-2 border-amber-500 pl-4">Scitech in general</li>
-            </ul>
-            <button
-                class="close-interests text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4 text-lg">
-                Close
-            </button>
-        </div>
+      <div
+        id="mobile-interests-panel"
+        class="hidden fixed inset-0 bg-black text-center flex flex-col items-center justify-center p-8 transition-all duration-500 ease-in-out opacity-0 pointer-events-none"
+      >
+        <h2 class="text-3xl font-bold text-gray-100 mb-8">Current Interests</h2>
+        <ul
+          id="mobile-interests-list"
+          class="space-y-4 text-lg text-gray-400 mb-8"
+        >
+          <li class="border-l-2 border-amber-500 pl-4">LLM Finetuning</li>
+          <li class="border-l-2 border-amber-500 pl-4">Data Science</li>
+          <li class="border-l-2 border-amber-500 pl-4">
+            Building useful but overlooked tools
+          </li>
+          <li class="border-l-2 border-amber-500 pl-4">
+            AI Alignment or the lack thereof
+          </li>
+          <li class="border-l-2 border-amber-500 pl-4">Scitech in general</li>
+        </ul>
+        <button
+          class="close-interests text-amber-500 hover:text-amber-400 transition-colors duration-300 underline decoration-dotted underline-offset-4 text-lg"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
-    <footer class="fixed bottom-0 left-0 right-0 p-4 text-center text-sm text-gray-600">
-        <p>
-            <span class="text-[8px]/[8px] tracking-[1px]">&copy; 2025 afunyun. All rights reserved. Don't take my subpar
-                website, worst mistake of your life.
-                <br />
-                Not because of consequences but like, why would you want this?
-            </span>
-        </p>
+    <footer
+      class="fixed bottom-0 left-0 right-0 p-4 text-center text-sm text-gray-600"
+    >
+      <p>
+        <span class="text-[8px]/[8px] tracking-[1px]"
+          >&copy; 2025 afunyun. All rights reserved. Don't take my subpar
+          website, worst mistake of your life.
+          <br />
+          Not because of consequences but like, why would you want this?
+          <br />
+          <a
+            href="/crime/"
+            class="text-amber-500 hover:text-amber-400 underline decoration-dotted underline-offset-4"
+            >crime project</a
+          >
+        </span>
+      </p>
     </footer>
-    <!--
-        Copyright (c) 2025 afunyun
-        No part of this work may be reproduced, distributed, transmitted,
-        displayed, published, or broadcast in any form or by any means,
-        without the prior written permission of the copyright owner.
-
-        Persons are also subject to the following conditions:
-        The above copyright notice and this permission notice shall be
-        included in all copies or substantial portions of the Software.
-
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

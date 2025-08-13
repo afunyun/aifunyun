@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ever wanted your clock to be less readable?</title>
+  <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>crime</h1>
+      </header>
+
+      <main>
+        <div class="clock-display">
+          <div class="cron-string">
+            <span id="cronTime">22 7 23 12 8 2</span>
+          </div>
+
+          <div class="cron-breakdown">
+            <div class="field">
+              <div class="value" id="second">22</div>
+              <div class="label">second</div>
+              <div class="label">0-59</div>
+            </div>
+            <div class="field">
+              <div class="value" id="minute">7</div>
+              <div class="label">minute</div>
+              <div class="label">0-59</div>
+            </div>
+            <div class="field">
+              <div class="value" id="hour">23</div>
+              <div class="label">hour</div>
+              <div class="label">0-23</div>
+            </div>
+            <div class="field">
+              <div class="value" id="dayOfMonth">
+                12
+              </div>
+              <div class="label">day</div>
+              <div class="label">1-31</div>
+            </div>
+            <div class="field">
+              <div class="value" id="month">8</div>
+              <div class="label">month</div>
+              <div class="label">1-12</div>
+            </div>
+            <div class="field">
+              <div class="value" id="dayOfWeek">2</div>
+              <div class="label">weekday</div>
+              <div class="label">0-6</div>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="readable-time">
+            <p>
+              Current time:
+              <span id="readableTime">
+                23:07:22 (Tue)
+              </span><br>
+              <span style="font-size:0.55em;">seconds are non standard but also clocks are kinda bad without them</span>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  <script src="js/script.js"></script>
+  </body>
+</html>

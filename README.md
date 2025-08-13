@@ -1,8 +1,12 @@
 # afunyun page
 
-## [afunyun.github.io](https://afunyun.github.io/aifunyun/)
+## Root site
 
-A small personal "about me" webpage built with HTML, CSS, and JavaScript, to be deployed here specifically.
+Now live at: [https://afunyun.github.io/](https://afunyun.github.io/)
+
+Subpages (goofy):
+
+- [crime clock](https://afunyun.github.io/crime/) (cron-style clock)
 
 ## Overview
 
